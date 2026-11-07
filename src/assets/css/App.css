@@ -1,0 +1,225 @@
+@import "https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap";
+
+body {
+  margin: 0;
+  background-color: #ffffff;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #333333;
+}
+
+/*----------bootstrap-navbar-css------------*/
+.navbar-header {
+  position: relative;
+  z-index: 1000;
+}
+
+.navbar-logo {
+  color: #fff;
+  padding: 6px 0;
+}
+
+.imglogo {
+  width: 90px;
+  height: auto;
+  max-height: 48px;
+  background: white;
+  border-radius: 5px;
+  padding: 3px 6px;
+  object-fit: contain;
+}
+
+.navbar-mainbg {
+  background-color: #5161ce;
+  padding: 0px;
+  box-shadow: 0 4px 12px rgba(81, 97, 206, 0.25);
+  position: relative;
+}
+
+#navbarSupportedContent {
+  position: relative;
+}
+
+#navbarSupportedContent ul {
+  padding: 0px;
+  margin: 0px;
+  position: relative;
+}
+
+#navbarSupportedContent ul li a i {
+  margin-right: 8px;
+}
+
+#navbarSupportedContent li {
+  list-style-type: none;
+  position: relative;
+  z-index: 2;
+}
+
+#navbarSupportedContent ul li a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  padding: 22px 20px;
+  position: relative;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+#navbarSupportedContent ul li a:hover {
+  color: #ffffff;
+}
+
+#navbarSupportedContent > ul > li.active > a {
+  color: #5161ce !important;
+  background-color: transparent;
+  font-weight: 600;
+}
+
+/* Sliding tab indicator for desktop */
+.hori-selector {
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: #ffffff;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  margin-top: 10px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hori-selector.has-transition {
+  transition-property: top, left, width, height, opacity;
+  transition-duration: 0.5s;
+  transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.hori-selector .right,
+.hori-selector .left {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: #ffffff;
+  bottom: 10px;
+}
+
+.hori-selector .right {
+  right: -25px;
+}
+
+.hori-selector .left {
+  left: -25px;
+}
+
+.hori-selector .right:before,
+.hori-selector .left:before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #5161ce;
+}
+
+.hori-selector .right:before {
+  bottom: 0;
+  right: -25px;
+}
+
+.hori-selector .left:before {
+  bottom: 0;
+  left: -25px;
+}
+
+/* Custom expand at 992px breakpoint */
+@media (min-width: 992px) {
+  .navbar-expand-custom {
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+  }
+
+  .navbar-expand-custom .navbar-nav {
+    flex-direction: row;
+  }
+
+  .navbar-expand-custom .navbar-toggler {
+    display: none;
+  }
+
+  .navbar-expand-custom .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto;
+    overflow: visible;
+  }
+}
+
+/* Mobile styles below 992px */
+@media (max-width: 991px) {
+  .navbar-mainbg {
+    padding: 8px 0;
+  }
+
+  .collapse-custom-hide {
+    display: none !important;
+  }
+
+  .collapse-custom-show {
+    display: block !important;
+    padding: 12px 0 16px 0;
+  }
+
+  /* Hide the horizontal floating curved selector on mobile to avoid overflow and clipping */
+  .hori-selector {
+    display: none !important;
+  }
+
+  #navbarSupportedContent ul li a {
+    padding: 12px 18px;
+    border-radius: 8px;
+    margin: 3px 0;
+  }
+
+  #navbarSupportedContent > ul > li.active > a {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff !important;
+  }
+
+  .navbar-toggler {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 6px 12px;
+    border-radius: 6px;
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
+  }
+}
+
+/* Main content styling */
+.main-wraper {
+  min-height: calc(100vh - 80px);
+}
+
+.age-result-box {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+.primary-age {
+  font-family: 'Orbitron', -apple-system, sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.age-result-box ul li {
+  line-height: 1.6;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace;
+}
+
+.shadow-xs {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
